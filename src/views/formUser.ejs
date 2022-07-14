@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="/formUser" method="POST">
+        <label for="usuario">Ingrese su usuario</label>
+        <input type="text" name="usuario" required>
+
+        <label for="usuario">Colores</label>
+        <select name="colores" required>
+            <option value="Azul">Azul</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Amarillo">Amarillo</option>
+            <option value="Blanco">Blanco</option>
+        </select>
+
+        <label for="email">Ingrese su email</label>
+        <input type="email" name="email" required>
+
+        <label for="edad">Ingrese su edad</label>
+        <input type="number" name="edad">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    
+        <% if(mensaje) { %>
+
+            <p> Hola <%=mensaje.nombreUsuario %> el color seleccionado es <%=mensaje.colorSeleccionado %>, tu email es: <%=mensaje.emailUsuario %> y tu edad es: <%=mensaje.edadUsuario %>. --> </p>
+
+        <% } %> 
+        
+    
+</body>
+</html>
